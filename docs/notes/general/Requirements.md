@@ -7,7 +7,7 @@ The mod “Advanced Beekeeping” must provide the datailed beekeeping to the ga
 - **Beehive** - A beehouse that can be bought in the shop.
 - **Bee colony** - A box with the bees and the queen inside.
 - **Wax frame** - Empty/Capped honey frame
-- **Box for Wax frames** - A box for max. 12 Wax frames.
+- **Box for Wax frames** - A box for max. 15 Wax frames.
 - **Honey house -** A production building. Has Honey extractor and honey filling machine inside.
 - **Glass Jar** - A jar that stores 3l of honey. Can be bought only in 12 packs.
 - **Crafted Honey -** A special honey made by bees of this mod. Stored in the glass jars. In 12 packs. Has increased price.

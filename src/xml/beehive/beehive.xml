@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="advancedBeekeepingHive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_storeItem_beehive</name>
+        <functions>
+            <function>$l10n_function_advancedBeekeepingHive</function>
+        </functions>
+        <image>src/xml/beehive/store_beehive.dds</image>
+        <price>750</price>
+        <lifetime>1000</lifetime>
+        <dailyUpkeep>0</dailyUpkeep>
+        <rotation>0</rotation>
+        <brand>SMALLBEEKEEPER</brand>
+        <species>PLACEABLE</species>
+        <category>beeHives</category>
+        <financeCategory>OTHER</financeCategory>
+        <brush>
+            <type>placeable</type>
+            <category>animals</category>
+            <tab>bees</tab>
+        </brush>
+    </storeData>
+
+    <base>
+        <filename>src/xml/beehive/beehive.i3d</filename>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true">
+        <testAreas>
+            <testArea startNode="testAreaStart01" endNode="testAreaEnd01"/>
+        </testAreas>
+        <sounds>
+            <place template="medImp"/>
+            <placeLayered template="beeLayer"/>
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearAreaStart01" widthNode="clearAreaWidth01" heightNode="clearAreaHeight01"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelAreaStart01" widthNode="levelAreaWidth01" heightNode="levelAreaHeight01"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorAreaStart01" widthNode="indoorAreaWidth01" heightNode="indoorAreaHeight01"/>
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01"/>
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01"/>
+        </updateAreas>
+    </ai>
+
+    <hotspots>
+        <hotspot type="BEE"/>
+    </hotspots>
+
+    <advancedBeekeepingHive interactionNode="interactionNode" interactionTriggerNode="interactionTrigger" playerTriggerNode="infoTrigger" interactionRadius="2.25" interactionHalfWidth="1.45" interactionHalfLength="1.45" infoDisplayDistance="3" capacity="15" minutesPerFrame="1"/>
+
+    <i3dMappings>
+        <i3dMapping id="clearAreaStart01" node="0>0|0"/>
+        <i3dMapping id="clearAreaWidth01" node="0>0|0|0"/>
+        <i3dMapping id="clearAreaHeight01" node="0>0|0|1"/>
+        <i3dMapping id="levelAreaStart01" node="0>1|0"/>
+        <i3dMapping id="levelAreaWidth01" node="0>1|0|0"/>
+        <i3dMapping id="levelAreaHeight01" node="0>1|0|1"/>
+        <i3dMapping id="indoorAreaStart01" node="0>2|0"/>
+        <i3dMapping id="indoorAreaWidth01" node="0>2|0|0"/>
+        <i3dMapping id="indoorAreaHeight01" node="0>2|0|1"/>
+        <i3dMapping id="testAreaStart01" node="0>3|0"/>
+        <i3dMapping id="testAreaEnd01" node="0>3|0|0"/>
+        <i3dMapping id="tipOcclusionUpdateAreaStart01" node="0>4|0"/>
+        <i3dMapping id="tipOcclusionUpdateAreaEnd01" node="0>4|0|0"/>
+        <i3dMapping id="infoTrigger" node="0>6|2"/>
+        <i3dMapping id="interactionNode" node="0>7"/>
+        <i3dMapping id="interactionTrigger" node="0>7|1"/>
+    </i3dMappings>
+</placeable>

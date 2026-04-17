@@ -2,28 +2,28 @@
 
 ## General Description
 
-The **Wax Frame** is a reusable item used for honey production inside a beehive.
+The **Wax Frame** is an internal gameplay item used for honey production inside a beehive.
 
-It can exist as an **individual object** or as part of a **container (frame box)**.
+For the current scope, a wax frame is **not** a standalone world object. It can only exist inside one of the supported containers:
 
-Wax frames have two states (Empty / Full) and a limited durability, after which they are destroyed.
+- Frame Box
+- Beehive
+- Honey Extractor
+
+Durability is intentionally removed for now. A frame only tracks its current state.
 
 ---
 
 ## Core Properties
 
-Each Wax Frame must have:
+Each Wax Frame has:
 
 - **State:**
     - `Empty`
     - `Full`
-- **Durability:**
-    - max uses: **10**
-    - decreases after each extraction
-    - destroyed at 0
 - **Physical form:**
-    - can exist as a **single carriable object**
-    - can be stored in containers
+    - no loose carriable object
+    - stored only as internal container state
 
 ---
 
@@ -43,41 +43,24 @@ Each Wax Frame must have:
 
 ## Lifecycle
 
-1. Empty frame → inserted into beehive
-2. Bees fill it → becomes Full
-3. Player removes it (single or via box)
+1. Empty frame is inserted into beehive from a Frame Box
+2. Bees fill it and it becomes Full
+3. Player removes it into a Frame Box
 4. Frame goes into extractor
-5. Becomes Empty again
-6. Durability -1
-7. Repeat until destroyed
-
----
-
-## Durability System
-
-- Each extraction reduces durability by 1
-- After **10 uses → frame is destroyed**
-- Destruction happens automatically (disappears)
+5. Extractor turns it back into Empty
+6. Empty frame returns to a Frame Box or another storage
 
 ---
 
 ## Player Interaction
 
-### The player CAN:
+The player cannot pick up a single frame directly.
 
-- pick up a single frame
-- carry it manually
-- insert it into:
-    - beehive
-    - frame box
-    - extractor
+The player interacts with frames through:
 
----
-
-### The player CANNOT:
-
-- split durability
-- repair frames (for now)
+- Frame Box
+- Beehive trigger or interaction
+- Honey Extractor trigger or interaction
 
 ---
 
@@ -93,71 +76,40 @@ Wax Frames can exist in:
 ### 2. Frame Box
 
 - main transport method
-- holds multiple frames (e.g. 12)
+- holds up to 15 frames
 
 ### 3. Honey Extractor
 
-- processes Full → Empty
-
-### 4. World (loose object)
-
-- can be dropped on ground
-- can be picked up again
-
----
-
-## Insertion Rules
-
-### Into Beehive
-
-- accepts both:
-    - single frames
-    - frames from box
-- cannot exceed capacity
-
----
-
-### Into Frame Box
-
-- player can:
-    - insert single frame
-    - auto-fill from hive (bulk)
-
----
-
-### Into Extractor
-
-- accepts:
-    - single frames
-    - frames from box
+- processes Full into Empty
 
 ---
 
 ## State Transitions
 
-- Empty → Full (in beehive)
-- Full → Empty (in extractor)
-- Any → Destroyed (durability = 0)
+- Empty -> Full, inside beehive
+- Full -> Empty, inside extractor
 
 ---
 
 ## Visual Representation
 
-- Empty → светлая рамка
-- Full → золотая / запечатанная
-- Low durability (optional) → изношенный вид
+- Empty -> light frame
+- Full -> capped honey frame
+
+Visuals are driven by the container that currently holds the frames.
 
 ---
 
 ## Scope Boundary
 
-Wax Frame is responsible for
+Wax Frame is responsible for:
 
-- Storing honey
-- participate in the production cycle
+- representing frame state
+- participating in the production cycle
 
 Not responsible for:
 
-- transport logi(its box)
-- honey production (its hive)
-- extracting (its extractor)
+- world pickup
+- transport logic, handled by Frame Box
+- honey production, handled by Beehive
+- extraction, handled by Honey Extractor

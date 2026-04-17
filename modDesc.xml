@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="104">
+    <author>Danylo</author>
+    <version>0.0.1.0</version>
+    <iconFilename>mod_logo.dds</iconFilename>
+
+    <title>
+        <en>Advanced Beekeeping</en>
+        <ru>Advanced Beekeeping</ru>
+    </title>
+
+    <description>
+        <en><![CDATA[Adds a deeper beekeeping workflow with portable bee colonies, wax frames, hives, and honey processing.]]></en>
+        <ru><![CDATA[Добавляет более детальное пчеловодство: переносимые пчелиные семьи, восковые рамки, ульи и переработку меда.]]></ru>
+    </description>
+
+    <multiplayer supported="true"/>
+
+    <brands>
+        <brand name="SMALLBEEKEEPER" title="Small Beekeeper" image="src/brandLogo.dds"/>
+    </brands>
+
+    <storeCategories>
+        <storeCategory type="OBJECT" name="beekeeping" title="Beekeeping" image="src/xml/beehive/store_beehive.dds" insertAfter="pallets"/>
+    </storeCategories>
+
+    <l10n>
+        <text name="storeCategory_beekeeping">
+            <en>Beekeeping</en>
+            <ru>Пчеловодство</ru>
+        </text>
+        <text name="storeItem_beeColonyBox">
+            <en>Bee Colony Box</en>
+            <ru>Пчелиная семья</ru>
+        </text>
+        <text name="typeDesc_beeColonyBox">
+            <en>Bee Colony</en>
+            <ru>Пчелиная семья</ru>
+        </text>
+        <text name="function_beeColonyBox">
+            <en>Contains 50,000 bees and one queen. Bring it to a prepared hive to start a colony.</en>
+            <ru>Содержит 50 000 пчел и одну матку. Отнесите к подготовленному улью, чтобы заселить его.</ru>
+        </text>
+        <text name="storeItem_frameBox">
+            <en>Box with Wax Frames</en>
+            <ru>&#x042f;&#x0449;&#x0438;&#x043a; &#x0434;&#x043b;&#x044f; &#x0440;&#x0430;&#x043c;&#x043e;&#x043a;</ru>
+        </text>
+        <text name="typeDesc_frameBox">
+            <en>Frame Box</en>
+            <ru>&#x042f;&#x0449;&#x0438;&#x043a; &#x0434;&#x043b;&#x044f; &#x0440;&#x0430;&#x043c;&#x043e;&#x043a;</ru>
+        </text>
+        <text name="function_frameBox">
+            <en>Stores up to 15 wax frames. This box starts with 15 empty frames.</en>
+            <ru>&#x0425;&#x0440;&#x0430;&#x043d;&#x0438;&#x0442; &#x0434;&#x043e; 15 &#x0432;&#x043e;&#x0441;&#x043a;&#x043e;&#x0432;&#x044b;&#x0445; &#x0440;&#x0430;&#x043c;&#x043e;&#x043a;. &#x0412; &#x044d;&#x0442;&#x043e;&#x043c; &#x044f;&#x0449;&#x0438;&#x043a;&#x0435; &#x0441;&#x0440;&#x0430;&#x0437;&#x0443; 15 &#x043f;&#x0443;&#x0441;&#x0442;&#x044b;&#x0445; &#x0440;&#x0430;&#x043c;&#x043e;&#x043a;.</ru>
+        </text>
+        <text name="advancedBeekeeping_frameBoxInfo_frames">
+            <en>Frames</en>
+            <ru>&#x0420;&#x0430;&#x043c;&#x043a;&#x0438;</ru>
+        </text>
+        <text name="advancedBeekeeping_frameBoxInfo_emptyFrames">
+            <en>Empty frames</en>
+            <ru>&#x041f;&#x0443;&#x0441;&#x0442;&#x044b;&#x0435; &#x0440;&#x0430;&#x043c;&#x043a;&#x0438;</ru>
+        </text>
+        <text name="advancedBeekeeping_frameBoxInfo_fullFrames">
+            <en>Full frames</en>
+            <ru>&#x041f;&#x043e;&#x043b;&#x043d;&#x044b;&#x0435; &#x0440;&#x0430;&#x043c;&#x043a;&#x0438;</ru>
+        </text>
+        <text name="storeItem_beehive">
+            <en>Advanced Beehive</en>
+            <ru>&#x0423;&#x043b;&#x0435;&#x0439;</ru>
+        </text>
+        <text name="typeDesc_beehive">
+            <en>Beehive</en>
+            <ru>&#x0423;&#x043b;&#x0435;&#x0439;</ru>
+        </text>
+        <text name="function_advancedBeekeepingHive">
+            <en>A working hive for advanced beekeeping. Place frame boxes and bee colonies in the marked rear zone; the hive fills frames instead of producing honey pallets.</en>
+            <ru>&#x0420;&#x0430;&#x0431;&#x043e;&#x0447;&#x0438;&#x0439; &#x0443;&#x043b;&#x0435;&#x0439; &#x0434;&#x043b;&#x044f; &#x0440;&#x0430;&#x0441;&#x0448;&#x0438;&#x0440;&#x0435;&#x043d;&#x043d;&#x043e;&#x0433;&#x043e; &#x043f;&#x0447;&#x0435;&#x043b;&#x043e;&#x0432;&#x043e;&#x0434;&#x0441;&#x0442;&#x0432;&#x0430;. &#x0421;&#x0442;&#x0430;&#x0432;&#x044c;&#x0442;&#x0435; &#x044f;&#x0449;&#x0438;&#x043a;&#x0438; &#x0441; &#x0440;&#x0430;&#x043c;&#x043a;&#x0430;&#x043c;&#x0438; &#x0438; &#x043f;&#x0447;&#x0435;&#x043b;&#x0438;&#x043d;&#x044b;&#x0435; &#x0441;&#x0435;&#x043c;&#x044c;&#x0438; &#x0432; &#x043e;&#x0442;&#x043c;&#x0435;&#x0447;&#x0435;&#x043d;&#x043d;&#x0443;&#x044e; &#x0437;&#x043e;&#x043d;&#x0443; &#x0441;&#x0437;&#x0430;&#x0434;&#x0438;; &#x0443;&#x043b;&#x0435;&#x0439; &#x0437;&#x0430;&#x043f;&#x043e;&#x043b;&#x043d;&#x044f;&#x0435;&#x0442; &#x0440;&#x0430;&#x043c;&#x043a;&#x0438; &#x0432;&#x043c;&#x0435;&#x0441;&#x0442;&#x043e; &#x043f;&#x0440;&#x043e;&#x0438;&#x0437;&#x0432;&#x043e;&#x0434;&#x0441;&#x0442;&#x0432;&#x0430; &#x043f;&#x043e;&#x0434;&#x0434;&#x043e;&#x043d;&#x043e;&#x0432; &#x043c;&#x0435;&#x0434;&#x0430;.</ru>
+        </text>
+        <text name="advancedBeekeeping_info_status">
+            <en>Status</en>
+            <ru>&#x0421;&#x0442;&#x0430;&#x0442;&#x0443;&#x0441;</ru>
+        </text>
+        <text name="advancedBeekeeping_info_bees">
+            <en>Bees</en>
+            <ru>&#x041f;&#x0447;&#x0435;&#x043b;&#x044b;</ru>
+        </text>
+        <text name="advancedBeekeeping_info_queen">
+            <en>Queen</en>
+            <ru>&#x041c;&#x0430;&#x0442;&#x043a;&#x0430;</ru>
+        </text>
+        <text name="advancedBeekeeping_info_emptyFrames">
+            <en>Empty Frames</en>
+            <ru>&#x041f;&#x0443;&#x0441;&#x0442;&#x044b;&#x0435; &#x0440;&#x0430;&#x043c;&#x043a;&#x0438;</ru>
+        </text>
+        <text name="advancedBeekeeping_info_fullFrames">
+            <en>Full Frames</en>
+            <ru>&#x041f;&#x043e;&#x043b;&#x043d;&#x044b;&#x0435; &#x0440;&#x0430;&#x043c;&#x043a;&#x0438;</ru>
+        </text>
+        <text name="advancedBeekeeping_info_warning">
+            <en>Warning</en>
+            <ru>&#x0412;&#x043d;&#x0438;&#x043c;&#x0430;&#x043d;&#x0438;&#x0435;</ru>
+        </text>
+        <text name="advancedBeekeeping_dialog_hiveInfoTitle">
+            <en>Hive Information</en>
+            <ru>&#x0418;&#x043d;&#x0444;&#x043e;&#x0440;&#x043c;&#x0430;&#x0446;&#x0438;&#x044f; &#x043e;&#x0431; &#x0443;&#x043b;&#x044c;&#x0435;</ru>
+        </text>
+        <text name="advancedBeekeeping_yes">
+            <en>Yes</en>
+            <ru>&#x0414;&#x0430;</ru>
+        </text>
+        <text name="advancedBeekeeping_no">
+            <en>No</en>
+            <ru>&#x041d;&#x0435;&#x0442;</ru>
+        </text>
+        <text name="advancedBeekeeping_status_empty">
+            <en>Empty</en>
+            <ru>&#x041f;&#x0443;&#x0441;&#x0442;&#x043e;</ru>
+        </text>
+        <text name="advancedBeekeeping_status_waitingForFrames">
+            <en>Waiting for Frames</en>
+            <ru>&#x0416;&#x0434;&#x0435;&#x0442; &#x0440;&#x0430;&#x043c;&#x043a;&#x0438;</ru>
+        </text>
+        <text name="advancedBeekeeping_status_waitingForBeeColony">
+            <en>Waiting for Bee Colony</en>
+            <ru>&#x0416;&#x0434;&#x0435;&#x0442; &#x043f;&#x0447;&#x0435;&#x043b;&#x0438;&#x043d;&#x0443;&#x044e; &#x0441;&#x0435;&#x043c;&#x044c;&#x044e;</ru>
+        </text>
+        <text name="advancedBeekeeping_status_working">
+            <en>Working</en>
+            <ru>&#x0420;&#x0430;&#x0431;&#x043e;&#x0442;&#x0430;&#x0435;&#x0442;</ru>
+        </text>
+        <text name="advancedBeekeeping_status_noQueen">
+            <en>No Queen</en>
+            <ru>&#x041d;&#x0435;&#x0442; &#x043c;&#x0430;&#x0442;&#x043a;&#x0438;</ru>
+        </text>
+        <text name="advancedBeekeeping_status_allFramesFilled">
+            <en>All Frames Filled</en>
+            <ru>&#x0412;&#x0441;&#x0435; &#x0440;&#x0430;&#x043c;&#x043a;&#x0438; &#x0437;&#x0430;&#x043f;&#x043e;&#x043b;&#x043d;&#x0435;&#x043d;&#x044b;</ru>
+        </text>
+        <text name="advancedBeekeeping_status_seasonalInactive">
+            <en>Inactive (Autumn/Winter)</en>
+            <ru>&#x041d;&#x0435;&#x0430;&#x043a;&#x0442;&#x0438;&#x0432;&#x0435;&#x043d; (&#x043e;&#x0441;&#x0435;&#x043d;&#x044c;/&#x0437;&#x0438;&#x043c;&#x0430;)</ru>
+        </text>
+    </l10n>
+
+    <extraSourceFiles>
+        <sourceFile filename="src/scripts/shop/AdvancedBeekeepingStoreCategories.lua"/>
+    </extraSourceFiles>
+
+    <specializations>
+        <specialization name="advancedBeekeepingBeeColony" className="AdvancedBeekeepingBeeColony" filename="src/scripts/vehicles/AdvancedBeekeepingBeeColony.lua"/>
+        <specialization name="advancedBeekeepingFrameBox" className="AdvancedBeekeepingFrameBox" filename="src/scripts/vehicles/AdvancedBeekeepingFrameBox.lua"/>
+    </specializations>
+
+    <placeableSpecializations>
+        <specialization name="advancedBeekeepingHive" className="AdvancedBeekeepingHive" filename="src/scripts/placeables/AdvancedBeekeepingHive.lua"/>
+    </placeableSpecializations>
+
+    <vehicleTypes>
+        <type name="advancedBeekeepingBeeColonyBox" parent="pallet" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="advancedBeekeepingBeeColony"/>
+        </type>
+        <type name="advancedBeekeepingFrameBox" parent="pallet" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="advancedBeekeepingFrameBox"/>
+        </type>
+    </vehicleTypes>
+
+    <placeableTypes>
+        <type name="advancedBeekeepingHive" parent="simplePlaceable" filename="$dataS/scripts/placeables/Placeable.lua">
+            <specialization name="placement"/>
+            <specialization name="advancedBeekeepingHive"/>
+        </type>
+    </placeableTypes>
+
+    <storeItems>
+        <storeItem xmlFilename="src/xml/beeColonyBox/beeColonyBox.xml"/>
+        <storeItem xmlFilename="src/xml/beeColonyBox/beeColonyBox_mip.xml"/>
+        <storeItem xmlFilename="src/xml/frameBox/frameBox.xml"/>
+        <storeItem xmlFilename="src/xml/frameBox/frameBox_mip.xml"/>
+        <storeItem xmlFilename="src/xml/beehive/beehive.xml"/>
+    </storeItems>
+</modDesc>

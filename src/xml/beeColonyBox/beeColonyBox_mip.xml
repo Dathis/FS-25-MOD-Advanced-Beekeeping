@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="multipleItemPurchase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/vehicle.xsd">
+    <storeData>
+        <name>$l10n_storeItem_beeColonyBox</name>
+        <functions>
+            <function>$l10n_function_beeColonyBox</function>
+        </functions>
+        <specs>
+            <weight ignore="true"/>
+        </specs>
+        <image>src/xml/beeColonyBox/store_beeBox.dds</image>
+        <price>300</price>
+        <allowLeasing>false</allowLeasing>
+        <canBeSold>false</canBeSold>
+        <rotation>0</rotation>
+        <brand>SMALLBEEKEEPER</brand>
+        <category>pallets beekeeping</category>
+        <financeCategory>OTHER</financeCategory>
+        <shopHeight>1.5</shopHeight>
+        <storeIconRendering>
+            <settings centerIcon="true" cameraXRot="-15" cameraYRot="35"/>
+        </storeIconRendering>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_beeColonyBox</typeDesc>
+        <filename>$data/objects/multiPurchaseItem/multiPurchaseItem.i3d</filename>
+        <size width="1.2" length="1.2" height="1.5"/>
+        <components>
+            <component centerOfMass="0 0.5 0" solverIterationCount="10" mass="120"/>
+        </components>
+    </base>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_pieces" fillTypes="HONEY" capacity="1" ignoreFillLimit="true"/>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <multipleItemPurchase filename="src/xml/beeColonyBox/beeColonyBox.xml" isVehicle="true">
+        <offsets>
+            <offset amount="1" offset="0 0 0"/>
+            <offset amount="12" offset="0 0 0"/>
+        </offsets>
+        <itemPositions>
+            <itemPosition position="-0.45 0.00 0.45" rotation="0 90 0"/>
+            <itemPosition position="0.00 0.00 0.45" rotation="0 90 0"/>
+            <itemPosition position="0.45 0.00 0.45" rotation="0 90 0"/>
+            <itemPosition position="-0.45 0.00 0.00" rotation="0 90 0"/>
+            <itemPosition position="0.00 0.00 0.00" rotation="0 90 0"/>
+            <itemPosition position="0.45 0.00 0.00" rotation="0 90 0"/>
+            <itemPosition position="-0.45 0.00 -0.45" rotation="0 90 0"/>
+            <itemPosition position="0.00 0.00 -0.45" rotation="0 90 0"/>
+            <itemPosition position="0.45 0.00 -0.45" rotation="0 90 0"/>
+            <itemPosition position="-0.45 0.40 0.00" rotation="0 90 0"/>
+            <itemPosition position="0.00 0.40 0.00" rotation="0 90 0"/>
+            <itemPosition position="0.45 0.40 0.00" rotation="0 90 0"/>
+        </itemPositions>
+    </multipleItemPurchase>
+
+    <multipleItemPurchaseAmountConfigurations>
+        <multipleItemPurchaseAmountConfiguration name="1" price="0"/>
+        <multipleItemPurchaseAmountConfiguration name="2" price="300"/>
+        <multipleItemPurchaseAmountConfiguration name="3" price="600"/>
+        <multipleItemPurchaseAmountConfiguration name="4" price="900"/>
+        <multipleItemPurchaseAmountConfiguration name="5" price="1200"/>
+        <multipleItemPurchaseAmountConfiguration name="6" price="1500"/>
+        <multipleItemPurchaseAmountConfiguration name="7" price="1800"/>
+        <multipleItemPurchaseAmountConfiguration name="8" price="2100"/>
+        <multipleItemPurchaseAmountConfiguration name="9" price="2400"/>
+        <multipleItemPurchaseAmountConfiguration name="10" price="2700"/>
+        <multipleItemPurchaseAmountConfiguration name="11" price="3000"/>
+        <multipleItemPurchaseAmountConfiguration name="12" price="3300"/>
+    </multipleItemPurchaseAmountConfigurations>
+</vehicle>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="advancedBeekeepingFrameBox" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/vehicle.xsd">
+    <storeData>
+        <name>$l10n_storeItem_frameBox</name>
+        <image>src/xml/frameBox/store_frameBox.dds</image>
+        <price>180</price>
+        <category>pallets beekeeping</category>
+        <brand>SMALLBEEKEEPER</brand>
+        <showInStore>false</showInStore>
+        <canBeSold>false</canBeSold>
+        <financeCategory>OTHER</financeCategory>
+        <functions>
+            <function>$l10n_function_frameBox</function>
+        </functions>
+        <specs>
+            <weight ignore="true"/>
+        </specs>
+        <storeIconRendering>
+            <settings centerIcon="true" cameraXRot="-15" cameraYRot="35"/>
+        </storeIconRendering>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_frameBox</typeDesc>
+        <filename>src/xml/frameBox/frameBox.i3d</filename>
+        <size width="0.703" length="0.611" height="0.46"/>
+        <canBeReset>false</canBeReset>
+        <supportsPickUp>true</supportsPickUp>
+        <components maxMass="40">
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="10"/>
+        </components>
+        <showInVehicleMenu>false</showInVehicleMenu>
+        <mapHotspot available="false"/>
+        <input allowed="false"/>
+    </base>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_pieces" fillTypes="HONEY" capacity="1" ignoreFillLimit="true" showInShop="false" showOnInfoHud="false" updateMass="false"/>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="solidColi"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="frameBox_main_component1" node="0>"/>
+        <i3dMapping id="woodenCrate" node="0>0"/>
+        <i3dMapping id="solidColi" node="0>1"/>
+        <i3dMapping id="visibilityObjects" node="0>4"/>
+        <i3dMapping id="honeycomb_empty01" node="0>4|0|0"/>
+        <i3dMapping id="honeycomb_empty02" node="0>4|0|1"/>
+        <i3dMapping id="honeycomb_empty03" node="0>4|0|2"/>
+        <i3dMapping id="honeycomb_empty04" node="0>4|0|3"/>
+        <i3dMapping id="honeycomb_empty05" node="0>4|0|4"/>
+        <i3dMapping id="honeycomb_empty06" node="0>4|0|5"/>
+        <i3dMapping id="honeycomb_empty07" node="0>4|0|6"/>
+        <i3dMapping id="honeycomb_empty08" node="0>4|0|7"/>
+        <i3dMapping id="honeycomb_empty09" node="0>4|0|8"/>
+        <i3dMapping id="honeycomb_empty10" node="0>4|0|9"/>
+        <i3dMapping id="honeycomb_empty11" node="0>4|0|10"/>
+        <i3dMapping id="honeycomb_empty12" node="0>4|0|11"/>
+        <i3dMapping id="honeycomb_empty13" node="0>4|0|12"/>
+        <i3dMapping id="honeycomb_empty14" node="0>4|0|13"/>
+        <i3dMapping id="honeycomb_empty15" node="0>4|0|14"/>
+    </i3dMappings>
+</vehicle>

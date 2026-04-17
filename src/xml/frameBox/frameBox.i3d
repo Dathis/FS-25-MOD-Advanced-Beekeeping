@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="honeyCombBoxFillable.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.11"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="honeyCombBox_diffuse.dds"/>
+    <File fileId="3" filename="honeyCombBox_normal.dds"/>
+    <File fileId="4" filename="honeyCombBox_specular.dds"/>
+    <File fileId="14" filename="honeycombFullDecal_diffuse.dds"/>
+    <File fileId="10" filename="honeycomb_diffuse.dds"/>
+    <File fileId="11" filename="honeycomb_normal.dds"/>
+    <File fileId="13" filename="window_diffuse.dds"/>
+    <File fileId="7" filename="brownPlanks_diffuse.dds"/>
+    <File fileId="8" filename="brownPlanks_normal.dds"/>
+    <File fileId="9" filename="brownPlanks_specular.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="honeycomb_mat" materialId="5" specularColor="0.494118 1 0.494118">
+      <Texture fileId="10"/>
+      <Normalmap fileId="11"/>
+    </Material>
+    <Material name="honeyCombBox_mat" materialId="6">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="honeyCombEmpty_mat" materialId="248">
+      <Texture fileId="13"/>
+    </Material>
+    <Material name="honeycombFrame_mat" materialId="7">
+      <Texture fileId="7"/>
+      <Normalmap fileId="8"/>
+      <Glossmap fileId="9"/>
+    </Material>
+    <Material name="honeyCombFull_mat" materialId="235" specularColor="0.494118 1 0.494118">
+      <Texture fileId="14"/>
+    </Material>
+    <Material name="lambert1" materialId="8" diffuseColor="0.486275 0.486275 0.486275 1">
+    </Material>
+    <Material name="lambert1" materialId="9" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="UnnamedMaterial" materialId="10" diffuseColor="1 1 1 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="frameBox.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="fillableHoneyBox_main_component1" shapeId="1" dynamic="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.2" clipDistance="200" nodeId="18" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="10">
+      <Shape name="honeyCombBox" shapeId="2" nodeId="19" castsShadows="true" receiveShadows="true" materialIds="6"/>
+      <Shape name="solidColi" shapeId="3" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.7" nodeId="20" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="9"/>
+      <Shape name="exactFillRootNode" translation="0 0.365625 0.00804687" shapeId="4" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="21" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
+      <TransformGroup name="dischargeNode" translation="0 0.62165 1.70819e-08" nodeId="22"/>
+      <TransformGroup name="visibilityObjects" translation="0 0.0190092 0" nodeId="23">
+        <TransformGroup name="honeyComb_empty" translation="0 0 0.00175701" nodeId="24">
+          <Shape name="honeycomb_empty01" translation="1.64192e-08 -0.0526007 0.252458" rotation="90 -90 -90" shapeId="5" nodeId="25" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="26" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef1" scale="1.3472 1 1" shapeId="7" nodeId="131" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+          <Shape name="honeycomb_empty02" translation="1.64192e-08 -0.0526007 0.215921" rotation="-180 90 -180" shapeId="5" nodeId="27" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="28" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef2" scale="1.3472 1 1" shapeId="7" nodeId="279" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+          <Shape name="honeycomb_empty03" translation="1.64192e-08 -0.0526007 0.179336" rotation="-180 90 -180" shapeId="5" nodeId="29" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="30" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef3" scale="1.3472 1 1" shapeId="7" nodeId="288" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+          <Shape name="honeycomb_empty04" translation="1.64192e-08 -0.0526007 0.14284" rotation="90 -90 -90" shapeId="5" nodeId="31" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="32" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef4" scale="1.3472 1 1" shapeId="7" nodeId="297" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+          <Shape name="honeycomb_empty05" translation="1.64192e-08 -0.0526007 0.107631" rotation="-180 90 -180" shapeId="5" nodeId="33" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="34" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef5" scale="1.3472 1 1" shapeId="7" nodeId="306" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+          <Shape name="honeycomb_empty06" translation="1.64192e-08 -0.0526007 0.0695653" rotation="90 -90 -90" shapeId="5" nodeId="35" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="36" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef6" scale="1.3472 1 1" shapeId="7" nodeId="315" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+          <Shape name="honeycomb_empty07" translation="1.63953e-08 -0.0526007 0.0327101" rotation="-180 90 -180" shapeId="5" nodeId="37" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="38" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef7" scale="1.3472 1 1" shapeId="7" nodeId="324" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+          <Shape name="honeycomb_empty08" translation="2.81744e-08 -0.0526007 -0.00343976" rotation="-180 90 -180" shapeId="5" nodeId="39" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="40" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef8" scale="1.3472 1 1" shapeId="7" nodeId="333" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+          <Shape name="honeycomb_empty09" translation="3.95572e-08 -0.0526007 -0.0383731" rotation="90 -90 -90" shapeId="5" nodeId="41" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="42" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef9" scale="1.3472 1 1" shapeId="7" nodeId="342" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+          <Shape name="honeycomb_empty10" translation="5.18796e-08 -0.0526007 -0.0761903" rotation="-180 90 -180" shapeId="5" nodeId="43" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="44" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef10" scale="1.3472 1 1" shapeId="7" nodeId="351" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+          <Shape name="honeycomb_empty11" translation="6.29997e-08 -0.0526007 -0.110318" rotation="90 -90 -90" shapeId="5" nodeId="45" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="46" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef11" scale="1.3472 1 1" shapeId="7" nodeId="360" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+          <Shape name="honeycomb_empty12" translation="7.4182e-08 -0.0526007 -0.144636" rotation="90 -90 -90" shapeId="5" nodeId="47" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="48" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef12" scale="1.3472 1 1" shapeId="7" nodeId="369" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+          <Shape name="honeycomb_empty13" translation="8.60209e-08 -0.0526007 -0.180969" rotation="-180 90 -180" shapeId="5" nodeId="49" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="50" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef13" scale="1.3472 1 1" shapeId="7" nodeId="378" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+          <Shape name="honeycomb_empty14" translation="9.82665e-08 -0.0526007 -0.218551" rotation="90 -90 -90" shapeId="5" nodeId="51" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="52" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef14" scale="1.3472 1 1" shapeId="7" nodeId="387" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+          <Shape name="honeycomb_empty15" translation="1.1054e-07 -0.0526007 -0.256217" rotation="-180 90 -180" shapeId="5" nodeId="53" castsShadows="true" receiveShadows="true" materialIds="7">
+            <Shape name="honeycomb_detail" shapeId="6" nodeId="54" castsShadows="true" receiveShadows="true" materialIds="5"/>
+            <Shape name="honeycomb_detailRef15" scale="1.3472 1 1" shapeId="7" nodeId="396" castsShadows="true" receiveShadows="true" materialIds="248"/>
+          </Shape>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="materialHolders" visibility="false" nodeId="180">
+        <Shape name="honeyCombEmpty_mat" shapeId="8" clipDistance="300" nodeId="181" castsShadows="true" receiveShadows="true" materialIds="248"/>
+        <Shape name="honeyCombFull_mat" shapeId="8" clipDistance="300" nodeId="208" castsShadows="true" receiveShadows="true" materialIds="235"/>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+</i3D>

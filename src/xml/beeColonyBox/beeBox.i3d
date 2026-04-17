@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="beeBox.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.11"/>
+  </Asset>
+
+  <Files>
+    <File fileId="3" filename="$data/maps/mapEU/textures/props/woodenShippingCrates_normal.png"/>
+    <File fileId="4" filename="$data/maps/mapEU/textures/props/woodenShippingCrates_specular.png"/>
+    <File fileId="5" filename="$data/shaders/placeableShader.xml"/>
+    <File fileId="2" filename="beeBox_diffuse.dds"/>
+    <File fileId="9" filename="$data/sounds/placeables/beeHives/objBeeHiveLoop_01.ogg"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="UnnamedMaterial" materialId="14" diffuseColor="1 1 1 1">
+    </Material>
+    <Material name="woodenShippingCrates_mat" materialId="5" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="beeBox.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="beeBox_main_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="100" nodeId="13" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="14">
+      <Shape name="beeBox_vis" shapeId="2" clipDistance="100" nodeId="8" castsShadows="true" receiveShadows="true" materialIds="5">
+        <AudioSource name="beeSound" nodeId="9" fileIds="9" range="8" innerRange="3" volume="0.1" loops="0" randomPlayback="true" probabilities="1" retriggerDelay="0 0"/>
+      </Shape>
+    </Shape>
+  </Scene>
+
+</i3D>

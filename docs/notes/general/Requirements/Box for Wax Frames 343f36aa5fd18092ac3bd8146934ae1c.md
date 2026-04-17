@@ -4,7 +4,7 @@
 
 The **Box for Wax Frames** is a portable container used to transport and manage wax frames between systems such as the **Beehive** and the **Honey Extractor**.
 
-It supports both **manual interaction (single frame)** and **bulk interaction (up to 12 frames)**, making it the primary tool for efficient beekeeping workflow.
+It supports bulk interaction (up to 15 frames), making it the primary tool for efficient beekeeping workflow.
 
 ---
 
@@ -12,7 +12,7 @@ It supports both **manual interaction (single frame)** and **bulk interaction (u
 
 The Box for Wax Frames must have the following attributes:
 
-- **Capacity:** max 12 frames
+- **Capacity:** max 15 frames
 - **Weight:** 5 kg (base weight, optional scaling with content)
 - **Type:** portable item
 - **Variants:**
@@ -31,7 +31,8 @@ The box can contain:
 ### Mixed Content
 
 - The box **can contain a mix** of empty and full frames
-- Each frame is tracked individually (state + durability)
+- Frames are tracked as internal counts by state
+- Durability is not tracked in the current scope
 
 ---
 
@@ -39,8 +40,7 @@ The box can contain:
 
 The player can buy:
 
-- an **empty box**
-- a **box pre-filled with empty frames (e.g. 12)**
+- a **box pre-filled with empty frames (15)**
 
 Both are available in the shop as items (not placeables).
 
@@ -53,7 +53,7 @@ The player must be able to:
 - pick up and carry the box
 - place it in the world
 - use it in interaction trigger zones
-- insert/remove individual frames manually
+- transfer frames through supported storage interactions
 
 ---
 
@@ -127,18 +127,6 @@ The box interacts automatically with systems when placed in a valid **trigger zo
 **Result:**
 
 - Empty frames are transferred into the box
-- durability already reduced
-
----
-
-## Manual Interaction (Optional but supported)
-
-The player can:
-
-- insert a single frame into the box
-- remove a single frame from the box
-
-This supports more detailed / realistic gameplay.
 
 ---
 
@@ -155,7 +143,7 @@ This supports more detailed / realistic gameplay.
 
 ## Capacity Rules
 
-- Maximum: **12 frames**
+- Maximum: **15 frames**
 - Cannot exceed capacity
 - Each frame occupies 1 slot
 

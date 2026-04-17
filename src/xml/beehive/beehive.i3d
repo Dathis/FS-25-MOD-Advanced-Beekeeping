@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="beehiveGeneric01" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="1" filename="beehive_diffuse.dds" />
+    <File fileId="2" filename="beehive_normal.dds" />
+    <File fileId="3" filename="beehive_specular.dds" />
+    <File fileId="4" filename="$data/shaders/placeableShader.xml" />
+    <File fileId="5" filename="$data/shared/warningStripes_diffuse.png" />
+    <File fileId="6" filename="$data/shared/warningStripes_normal.png" />
+    <File fileId="7" filename="$data/shared/warningStripes_specular.png" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="2" diffuseColor="0.5 0.5 0.5 1">
+    </Material>
+    <Material name="beehiveGeneric01_mat" materialId="1" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="advancedBeekeepingInteractionArea_mat" materialId="3">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="beehive.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="beehiveGeneric01" lockedgroup="true" static="true" density="0" collisionFilterMask="0xfffffbff" nodeId="1">
+      <TransformGroup name="clearAreas" nodeId="2">
+        <TransformGroup name="clearAreaStart01" translation="-0.75 0 -0.75" nodeId="3">
+          <TransformGroup name="clearAreaWidth01" translation="0 0 1.5" nodeId="4"/>
+          <TransformGroup name="clearAreaHeight01" translation="1.5 0 0" nodeId="5"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="levelAreas" nodeId="6">
+        <TransformGroup name="levelAreaStart01" translation="-0.75 0 -0.75" nodeId="7">
+          <TransformGroup name="levelAreaWidth01" translation="0 0 1.5" nodeId="8"/>
+          <TransformGroup name="levelAreaHeight01" translation="1.5 0 0" nodeId="9"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="indoorAreas" nodeId="10">
+        <TransformGroup name="indoorAreaStart01" translation="-0.75 0 -0.75" nodeId="11">
+          <TransformGroup name="indoorAreaWidth01" translation="0 0 1.5" nodeId="12"/>
+          <TransformGroup name="indoorAreaHeight01" translation="1.5 0 0" nodeId="13"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="testAreas" nodeId="14">
+        <TransformGroup name="testAreaStart01" translation="-0.75 0 -0.75" nodeId="15">
+          <TransformGroup name="testAreaEnd01" translation="1.5 1.5 1.5" nodeId="16"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="tipOcclusionUpdateAreas" nodeId="17">
+        <TransformGroup name="tipOcclusionUpdateAreaStart01" translation="-0.75 0 -0.75" nodeId="18">
+          <TransformGroup name="tipOcclusionUpdateAreaEnd01" translation="1.5 0 1.5" nodeId="19"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="visuals" nodeId="20">
+        <TransformGroup name="visuals_lod" lockedgroup="true" lodDistance="0 50" static="true" density="0" collisionFilterMask="0xfffffbff" nodeId="21">
+          <TransformGroup name="LOD0" nodeId="22">
+            <Shape name="beehiveGeneric01_lod0" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="23"/>
+          </TransformGroup>
+          <TransformGroup name="LOD1" nodeId="24">
+            <Shape name="beehiveGeneric01_lod1" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="25"/>
+          </TransformGroup>
+        </TransformGroup>
+        <Shape name="emitterShape" translation="-0.052263 0.766316 0.591669" rotation="0 90 0" shapeId="3" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="2" clipDistance="300" nodeId="26"/>
+      </TransformGroup>
+      <TransformGroup name="collisions" nodeId="27">
+        <Shape name="collision" shapeId="4" static="true" density="0" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="2" nodeId="28"/>
+        <Shape name="tipCollision" shapeId="5" static="true" collisionFilterGroup="0x8" collisionFilterMask="0x1" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="2" nodeId="29"/>
+        <Shape name="infoTrigger" translation="0 0.4 0" scale="3 1.8 3" shapeId="4" static="true" trigger="true" density="0" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="2" clipDistance="300" nodeId="30"/>
+      </TransformGroup>
+      <TransformGroup name="interactionNode" translation="0 0 -0.95" nodeId="31">
+        <Shape name="interactionAreaVisual" translation="0 0.02 0" scale="1.35 0.02 1.35" shapeId="4" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="80" nodeId="35"/>
+        <Shape name="interactionTrigger" translation="0 0.45 0" scale="1.45 1 1.45" shapeId="4" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0xffffffff" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="2" nodeId="36"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+  </UserAttributes>
+</i3D>

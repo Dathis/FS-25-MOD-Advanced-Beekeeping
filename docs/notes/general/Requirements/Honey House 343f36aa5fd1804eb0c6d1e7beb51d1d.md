@@ -31,7 +31,6 @@ The process is **automatic after manual activation**.
 - accepts **Full Wax Frames**
 - frames can be inserted via:
     - Box for Wax Frames
-    - single frames
 
 ---
 
@@ -58,7 +57,6 @@ When the player starts the extractor:
 2. player cannot interact with it during the cycle
 3. after 10 seconds:
     - all Full Frames become **Empty Frames**
-    - each frame loses **1 durability point**
     - liquid honey is added to internal storage
 
 ---

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="advancedBeekeepingBeeColonyBox" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/vehicle.xsd">
+    <storeData>
+        <name>$l10n_storeItem_beeColonyBox</name>
+        <image>src/xml/beeColonyBox/store_beeBox.dds</image>
+        <price>300</price>
+        <category>pallets beekeeping</category>
+        <brand>SMALLBEEKEEPER</brand>
+        <showInStore>false</showInStore>
+        <canBeSold>false</canBeSold>
+        <financeCategory>OTHER</financeCategory>
+        <functions>
+            <function>$l10n_function_beeColonyBox</function>
+        </functions>
+        <storeIconRendering>
+            <settings centerIcon="true" cameraXRot="-15" cameraYRot="35"/>
+        </storeIconRendering>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_beeColonyBox</typeDesc>
+        <filename>src/xml/beeColonyBox/beeBox.i3d</filename>
+        <size width="0.35" length="0.35" height="0.35"/>
+        <canBeReset>false</canBeReset>
+        <supportsPickUp>true</supportsPickUp>
+        <components maxMass="40">
+            <component centerOfMass="0 -0.05 0" solverIterationCount="10" mass="10"/>
+        </components>
+        <showInVehicleMenu>false</showInVehicleMenu>
+        <mapHotspot available="false"/>
+        <input allowed="false"/>
+    </base>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_pieces" fillTypes="HONEY" capacity="1" ignoreFillLimit="true"/>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="beeBox_vis"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="beeBox_main_component1" node="0>"/>
+        <i3dMapping id="beeBox_vis" node="0>0"/>
+        <i3dMapping id="beeSound" node="0>0|0"/>
+    </i3dMappings>
+</vehicle>
